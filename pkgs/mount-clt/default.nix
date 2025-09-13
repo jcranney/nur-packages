@@ -4,7 +4,7 @@
 rustPlatform.buildRustPackage rec {
   
   pname = "mount-clt";
-  version = "v0.1.0";
+  version = "v0.1.1";
 
   cargoLock.lockFile = "${src}/Cargo.lock";
 
@@ -15,7 +15,7 @@ rustPlatform.buildRustPackage rec {
     owner = "jcranney";
     repo = pname;
     rev = version;
-    hash = "sha256-Vq6CzsQbA9NRytGt+XJyT15z6JG4czOyyylKygkMb90=";
+    hash = "sha256-w63u5JFJrw8+kiE3f+DCzEGB2oM+VZdy79DGewR1xVs=";
   };
 
   meta = with lib; {
