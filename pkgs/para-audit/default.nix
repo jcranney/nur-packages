@@ -4,7 +4,7 @@
 rustPlatform.buildRustPackage rec {
   
   pname = "para-audit";
-  version = "0.1.9";
+  version = "0.1.10";
 
   cargoLock.lockFile = "${src}/Cargo.lock";
 
@@ -15,7 +15,8 @@ rustPlatform.buildRustPackage rec {
     owner = "jcranney";
     repo = pname;
     rev = version;
-    hash = "sha256-+qPpKFY5fs9HkQ9cPJ973OIemoq9HlUKxBnsz22BlDg=";
+    hash = "sha256-8NyiiZivmXjx9GQY7biwKHZvfa4acOZJZcFHZqEWc7I=";
+    # hash = lib.fakeHash;
   };
 
   meta = with lib; {

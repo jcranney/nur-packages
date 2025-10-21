@@ -17,6 +17,7 @@
   example-package = pkgs.callPackage ./pkgs/example-package { };
   para-audit = pkgs.callPackage ./pkgs/para-audit { };
   mount-clt = pkgs.callPackage ./pkgs/mount-clt { };
+  # globalprotect-openconnect = pkgs.callPackage ./pkgs/globalprotect { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
