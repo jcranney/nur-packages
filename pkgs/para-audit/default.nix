@@ -1,5 +1,5 @@
 { 
-  stdenv, rustPlatform, lib, pkgs
+  rustPlatform, lib, fetchgit, pkgs
 }:
 rustPlatform.buildRustPackage rec {
   
@@ -11,12 +11,10 @@ rustPlatform.buildRustPackage rec {
   nativeBuildInputs = [ pkgs.pkg-config ];
   buildInputs = [ pkgs.openssl ];
 
-  src = pkgs.fetchFromGitHub {
-    owner = "jcranney";
-    repo = pname;
-    rev = version;
+  src = fetchgit {
+    url = "https://github.com/jcranney/para-audit.git";
+    tag = version;
     hash = "sha256-tOfq/lkvdaTKzyQY0mQjbRLloE2udQAqgdIPYJBzfDg=";
-    # hash = lib.fakeHash;
   };
 
   meta = with lib; {
