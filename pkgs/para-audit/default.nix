@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage rec {
     homepage = https://github.com/jcranney/para-audit;
     license = licenses.unlicense;
     platforms = platforms.all;
+    mainProgram = "para";
   };
 }
