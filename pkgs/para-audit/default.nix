@@ -1,5 +1,5 @@
 { 
-  stdenv, fetchFromGitHub, rustPlatform, lib, pkgs
+  stdenv, rustPlatform, lib, pkgs
 }:
 rustPlatform.buildRustPackage rec {
   
@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage rec {
   nativeBuildInputs = [ pkgs.pkg-config ];
   buildInputs = [ pkgs.openssl ];
 
-  src = fetchFromGitHub {
+  src = pkgs.fetchFromGitHub {
     owner = "jcranney";
     repo = pname;
     rev = version;
