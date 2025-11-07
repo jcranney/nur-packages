@@ -6,7 +6,7 @@ rustPlatform.buildRustPackage rec {
   pname = "para-audit";
   version = "0.1.11";
 
-  cargoLock.lockFile = "${src}/Cargo.lock";
+  cargoHash = "sha256-sso1OF+n+UrRUTaXveYi5EbUI65X3NkeYEdx7nNRQKE=";
 
   nativeBuildInputs = [ pkgs.pkg-config ];
   buildInputs = [ pkgs.openssl ];
